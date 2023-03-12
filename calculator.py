@@ -28,13 +28,13 @@ operations = {"+": add, "-": subtract, "*": multiply, "/": divide}
 def calculation():
     #variable to end program
     exit = False
-    num1 = int(input("Enter first number: "))
+    num1 = float(input("Enter first number: "))
     #loop through the dictionary of operations to offer symbols to user
     for operator in operations:
         print(operator)
     while not exit:
         operation_symbol = input("Pick an operation: ")
-        num2 = int(input("What's the next number: "))
+        num2 = float(input("What's the next number: "))
         #calculate result
         operation_function = operations[operation_symbol]
         answer = operation_function(num1, num2)
